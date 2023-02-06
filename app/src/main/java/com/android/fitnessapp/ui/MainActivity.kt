@@ -18,7 +18,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         navController?.addOnDestinationChangedListener { _, destination, _ ->
