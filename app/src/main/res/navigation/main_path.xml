@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_path"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.fitnessapp.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.android.fitnessapp.ui.fragments.GoalsFragment"
+        android:label="fragment_goals"
+        tools:layout="@layout/fragment_goals" />
+    <fragment
+        android:id="@+id/addGoalFragment"
+        android:name="com.android.fitnessapp.ui.fragments.AddGoalFragment"
+        android:label="fragment_goal_add"
+        tools:layout="@layout/fragment_goal_add" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.android.fitnessapp.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

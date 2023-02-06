@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_grad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AddGoalFragment">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextHead1"
+        android:padding="@dimen/space_m"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/space_m"
+        android:text="@string/add_new_goal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/space_l"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:padding="@dimen/space_l"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiGoal"
+                android:layout_marginTop="@dimen/space_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconTint="@color/gray"
+                app:endIconTint="@color/gray"
+                android:hint="@string/goal_name"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etGoal"
+                    style="@style/TextNormal"
+                    android:textColor="@color/textSecondary"
+                    android:textColorHint="@color/gray"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiTarget"
+                android:layout_marginTop="@dimen/space_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconTint="@color/gray"
+                app:endIconTint="@color/gray"
+                android:hint="@string/target"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTarget"
+                    style="@style/TextNormal"
+                    android:textColor="@color/textSecondary"
+                    android:textColorHint="@color/gray"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save"
+                style="@style/TextNormal"
+                android:textAllCaps="true"
+                android:text="@string/save"
+                android:background="@drawable/button_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_margin="@dimen/space_l"
+        android:tint="@color/white"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/size_s"
+        android:layout_height="@dimen/size_s"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

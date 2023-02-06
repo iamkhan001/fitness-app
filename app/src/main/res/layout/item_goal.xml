@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/space_l"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/cardview_dark_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:padding="@dimen/space_l"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvGoalName"
+            style="@style/TextNormal"
+            android:textColor="@color/white_t"
+            android:text="@string/goal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/goalName"
+            style="@style/TextSubHead"
+            android:text="@string/sample_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvTarget"
+            style="@style/TextNormal"
+            android:layout_marginTop="@dimen/space_m"
+            android:textColor="@color/white_t"
+            android:text="@string/target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/target"
+            style="@style/TextSubHead"
+            android:text="2000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSteps"
+            style="@style/TextNormal"
+            android:layout_marginTop="@dimen/space_m"
+            android:textColor="@color/white_t"
+            android:text="@string/steps_completed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/steps"
+            style="@style/TextSubHead"
+            android:text="1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/active"
+            style="@style/TextSubHead"
+            android:text="@string/active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
